@@ -1,0 +1,14 @@
+:root {
+    --background: #c6edc3;
+}
+
+body {
+    background-color: var(--background) !important;
+}
+
+.nav-login-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

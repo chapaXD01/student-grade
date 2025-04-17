@@ -1,14 +1,77 @@
 :root {
-    --background: #c6edc3;
+    --background: #d0f4cd;
+    --text-color: #458441;
+
+    /* pogas */
+    --btn-hover: #346831;
+    --delete-btn: #be1717;
+    --delete-hover: #a31313;
+    --user-btn: #a8e7a2;
+    --user-btn-hover: #95d08f;
+
+    /* inputs */
+    --in-focus: #64b75e;
+    --in-focus-shadow: #64b75e7f;
+    --in-focus-shadow2: #64b75e4b;
 }
 
 body {
-    background-color: var(--background) !important;
+    background-color: var(--background);
 }
 
+button {
+    background-color: var(--text-color) !important;
+    color: white !important;
+}
+
+button:hover {
+    background-color: var(--btn-hover) !important;
+    color: white !important;
+}
+
+.delete {
+    background-color: var(--delete-btn) !important;
+}
+
+.delete:hover {
+    background-color: var(--delete-hover) !important;
+}
+
+.cancel:focus {
+    border-color: pink !important;
+}
+
+.user-btn {
+    color: white;
+}
+
+.user-btn:hover {
+    color: white;
+}
+
+/* welcome page */
 .nav-login-register {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+    color: var(--text-color);
+}
+
+.nav-login-register a {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.logo {
+    color: var(--text-color);
+}
+
+input:focus {
+    outline: none !important;
+    border: 1px solid var(--in-focus) !important;
+    box-shadow:
+        0 0 8px var(--in-focus-shadow),
+        0 0 10px var(--in-focus-shadow2) !important;
+    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out !important;
 }

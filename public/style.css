@@ -13,6 +13,24 @@
     --in-focus: #64b75e;
     --in-focus-shadow: #64b75e7f;
     --in-focus-shadow2: #64b75e4b;
+
+    /* navbar */
+    --nav-color: #4da354;
+    --nav-hover: #2a5426;
+    --nav-active: #3c7d41;
+
+    --res-nav-text: #4da354;           /* Matches --nav-color */
+    --res-nav-hover-text: #2a5426;     /* Matches --nav-hover */
+    --res-nav-hover-bg: #e8f5e9;       /* Light green for hover background */
+    --res-nav-hover-border: #a5d6a7;   /* Soft green border for hover */
+
+    --res-nav-active-text: #3c7d41;    /* Matches --nav-active */
+    --res-nav-active-bg: #c8eac9;      /* Pale green background for active */
+    --res-nav-active-border: #3c7d41;  /* Matches --nav-active border */
+
+    --res-nav-focus-text: #2e7031;     /* Slightly deeper green */
+    --res-nav-focus-bg: #c8e6c9;       /* Green-tinted focus background */
+    --res-nav-focus-border: #2a5426;   /* Matches --nav-hover as a strong focus border */
 }
 
 body {
@@ -74,4 +92,50 @@ input:focus {
         0 0 8px var(--in-focus-shadow),
         0 0 10px var(--in-focus-shadow2) !important;
     transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out !important;
+}
+
+/* navbar */
+.nav-link a {
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    color: var(--nav-color);
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link a:hover {
+    color: var(--nav-hover);
+    border-bottom-color: var(--nav-hover);
+}
+
+.nav-link a.active {
+    border-bottom-color: var(--nav-active);
+    color: var(--nav-active);
+}
+
+/* responsive navbar (small) */
+.res-nav a {
+    color: var(--res-nav-text);
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.res-nav a:hover {
+    color: var(--res-nav-hover-text);
+    background-color: var(--res-nav-hover-bg);
+    border-left-color: var(--res-nav-hover-border);
+}
+
+.res-nav a:focus {
+    outline: none;
+    color: var(--res-nav-focus-text);
+    background-color: var(--res-nav-focus-bg);
+    border-left-color: var(--res-nav-focus-border);
+}
+
+.res-nav a.active {
+    color: var(--res-nav-active-text);
+    background-color: var(--res-nav-active-bg);
+    border-left-color: var(--res-nav-active-border);
 }
